@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Jugador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="file"] {
+            margin-bottom: 15px;
+            padding: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Captura de Jugador</h1>
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Introduce el nombre">
+
+        <label for="alias">Alias:</label>
+        <input type="text" id="alias" name="alias" required placeholder="Introduce el alias">
+
+        <label for="imagen">Imagen (opcional):</label>
+        <input type="file" id="imagen" name="imagen" accept="image/png">
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
